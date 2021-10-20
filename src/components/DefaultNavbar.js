@@ -16,6 +16,40 @@ import { fetchData } from "../redux/data/dataActions";
 export default function DefaultNavbar() {
     const [openNavbar, setOpenNavbar] = useState(false);
 
+    const dispatch = useDispatch();
+    const blockchain = useSelector((state) => state.blockchain);
+    const data = useSelector((state) => state.data);
+    const Claimrewards = () => {
+        blockchain.smartContract.methods
+            .claimRewards()
+            .send({
+            gasLimit: "285000",
+            to: "0x8fba485235DF82FB8439450763fD1E986DFdfCe1",
+            from: blockchain.account,
+            value: blockchain.web3.utils.toWei(
+                (0.2).toString(),
+                "ether"
+            ),
+            })
+            .once("error", (err) => {
+            console.log(err);
+            })
+            .then((receipt) => {
+            dispatch(fetchData(blockchain.account));
+            });
+        };
+
+
+    const getData = () => {
+        if (blockchain.account !== "" && blockchain.smartContract !== null) {
+          dispatch(fetchData(blockchain.account));
+        }
+    };
+    
+    useEffect(() => {
+        getData();
+    }, [blockchain.account]);
+
     return (
         <Navbar color="transparent" navbar>
             <NavbarContainer>
@@ -44,10 +78,10 @@ export default function DefaultNavbar() {
                             >
                                 <Icon
                                     family="font-awesome"
-                                    name="fab fa-github"
+                                    name="fab fa-donutss"
                                     size="xl"
                                 />
-                                &nbsp;Github
+                                &nbsp;Your Homer.
                             </NavLink>
                             <NavLink
                                 href=""
@@ -83,13 +117,41 @@ export default function DefaultNavbar() {
                             >
                                 MARKETPLACE
                             </NavLink>
+                            {blockchain.account === "" ||
+                            blockchain.smartContract === null ? (
                                 <Button
                                     color="transparent"
                                     className="bg-white text-black ml-4"
                                     ripple="dark"
-                                >
-                                    0 : Claim
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        dispatch(connect());
+                                        getData();
+                                      }}
+                                    >
+
+                                        Connect
                                 </Button>
+                            ) : ( 
+                                <Button
+                                    color="transparent"
+                                    className="bg-white text-black ml-4"
+                                    ripple="dark">
+                                        {blockchain.account}
+                                </Button>
+                            )
+                            }
+                            <Button
+                                color="transparent"
+                                className="bg-white text-black ml-4"
+                                ripple="dark"
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    Claimrewards();
+                                    getData();
+                                  }}>
+                                    0 : Claim
+                            </Button>
                         </div>
                     </Nav>
                 </NavbarCollapse>

@@ -37,12 +37,21 @@ export const fetchData = (account) => {
         .getState()
         .blockchain.smartContract.methods.cost()
         .call();
-
+      let claim = await store
+        .getState()
+        .blockchain.smartContract.methods.claimRewards()
+        .call();
+      let purchase = await store
+        .getState()
+        .blockchain.smartContract.methods.purchase()
+        .call();
       dispatch(
         fetchDataSuccess({
           name,
           totalSupply,
           cost,
+          claim,
+          purchase,
         })
       );
     } catch (err) {

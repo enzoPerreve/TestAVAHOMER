@@ -48,10 +48,10 @@ export const connect = () => {
           method: "eth_chainId",
         });
         // const NetworkData = await SmartContract.networks[networkId];
-        if (networkId == 43114) {
+        if (networkId == 43113) { //43114
           const SmartContractObj = new Web3EthContract(
             SmartContract,
-            "0x65787a9ABC4563316B20ce6c46d0f46F4e357c36"
+            "0x8fba485235DF82FB8439450763fD1E986DFdfCe1"
           );
           dispatch(
             connectSuccess({

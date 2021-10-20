@@ -14,7 +14,7 @@ export default function Header() {
                             Reflection NFT Collection on Avalanche
                             </LeadText>
                             <LeadText color="gray-200">
-                            Launching October 23, 2021. Make sure you are ready on 4PM UTC!
+                            Launching soon !
                             </LeadText>
                            
                         </div>

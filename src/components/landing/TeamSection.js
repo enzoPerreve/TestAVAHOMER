@@ -10,28 +10,28 @@ export default function TeamSection() {
         <section className="pt-20 pb-48">
             <div className="container max-w-7xl mx-auto px-4">
                 <Title heading="Roadmap">
-                Here is our Roadmap
+                We will in addition to the roadmap given 5 000 $USDT every 5% of sales 
                 </Title>
                 <div className="flex flex-wrap">
                     <TeamCard
                         img={Image1}
                         name="25%"
-                        position="25 000$ Giveaway Among the Owners"
+                        position="NFT trade Verify"
                     />
                     <TeamCard
                         img={Image2}
                         name="50%"
-                        position="50 000$ Giveaway Among the Owners"
+                        position="5 NFT Giveaway on Discord"
                     />
                     <TeamCard
                         img={Image3}
                         name="75%"
-                        position="75 000$ Giveaway Amont the Owners"
+                        position="Next Gen preview"
                     />
                     <TeamCard
                         img={Image4}
                         name="100%"
-                        position="You can claim your reflections"
+                        position="10 NFT Giveaway"
                     />
                 </div>
             </div>
