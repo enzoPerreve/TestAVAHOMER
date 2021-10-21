@@ -17,13 +17,13 @@ export default function ContactSection() {
                     Homer will release soon. Make sure to follow us on Twitter and join the Discord/Telegram. Homer will be tradable on the AvaPepe marketplace!
                     </ContactCard>
                     <ContactCard icon="launch" title="Avalanche">
-                    Metamask selected with the Avalanche network
+                    Why Avalanche ? Avalanche is one of the cheapest but also the fastest Blockchain our team loves working on this blockchain also due to its strong community
                     </ContactCard>
                     <ContactCard icon="launch" title="Marketplace">
-                    More information will come soon ! 
+                    Only one thing can be revealed the owners will have 4% of relfections on sales on the marketplace whether it is on our site or another ! More information will come soon !
                     </ContactCard>
                     <ContactCard icon="launch" title="Price">
-                    The price is 2 $AVAX
+                    The price is 2 $AVAX ! Why $ 2 AVAX? it is simple thanks to the reflection of 20% the holders who arrive the earliest will benefit from the mint of the others and will reimburse their nft very quickly!
                     </ContactCard>
                 </div>
 
