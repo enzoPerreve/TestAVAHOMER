@@ -16,22 +16,22 @@ export default function TeamSection() {
                     <TeamCard
                         img={Image1}
                         name="25%"
-                        position="NFT trade Verify"
+                        position="We will be verified on NFT trade because of their conditions but also we will be offering several homer NFTs to our best discorders."
                     />
                     <TeamCard
                         img={Image2}
                         name="50%"
-                        position="5 NFT Giveaway on Discord"
+                        position="$ 25 AVAX giveaway for 2 homer holders"
                     />
                     <TeamCard
                         img={Image3}
                         name="75%"
-                        position="Next Gen preview"
+                        position="We will show you a preview of the next generation as well as the second generation utility"
                     />
                     <TeamCard
                         img={Image4}
                         name="100%"
-                        position="10 NFT Giveaway"
+                        position="We will offer 10 Homer between the owners"
                     />
                 </div>
             </div>
