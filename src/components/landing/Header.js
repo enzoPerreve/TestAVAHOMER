@@ -1,7 +1,26 @@
 import H2 from '@material-tailwind/react/Heading2';
 import LeadText from '@material-tailwind/react/LeadText';
+import Button from '@material-tailwind/react/Button';
+import { useDispatch, useSelector } from "react-redux";
+import { connect } from "../redux/blockchain/blockchainActions";
+import { fetchData } from "../redux/data/dataActions";
+
+
+const getData = () => {
+    if (blockchain.account !== "" && blockchain.smartContract !== null) {
+  dispatch(fetchData(blockchain.account));
+    }
+};
+
+useEffect(() => {
+    getData();
+}, [blockchain.account]);
 
 export default function Header() {
+    const dispatch = useDispatch();
+    const blockchain = useSelector((state) => state.blockchain);
+    const data = useSelector((state) => state.data);
+    
     return (
         <div className="relative pt-16 pb-32 flex content-center items-center justify-center h-screen">
             <div className="bg-landing-background bg-cover bg-center absolute top-0 w-full h-full" />
@@ -11,8 +30,32 @@ export default function Header() {
                         <H2 color="white">Homer.</H2>
                         <div className="text-gray-200">
                             <LeadText color="gray-200">
-                            Reflection NFT Collection on Avalanche
+                            Homer. Reflection Collection on Avalanche 
                             </LeadText>
+                            {blockchain.account === "" ||
+                              blockchain.smartContract === null ? (
+                                <Button
+                                    color="transparent"
+                                    className="bg-white text-black ml-4"
+                                    ripple="dark"
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        dispatch(connect());
+                                        getData();
+                                      }}
+                                    >
+
+                                        Connect to Avalanche Network
+                                </Button>
+                            ) : ( 
+                                <Button
+                                    color="transparent"
+                                    className="bg-white text-black ml-4"
+                                    ripple="dark">
+                                        {blockchain.account}
+                                </Button>
+                            )
+                            }
                             <LeadText color="gray-200">
                             Launching soon !
                             </LeadText>
