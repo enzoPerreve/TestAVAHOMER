@@ -173,12 +173,13 @@ export default function WorkingSection() {
                             iconOnly={false}
                             ripple="light"
                             className="text-blue-gray-800 p-3 text-center inline-flex items-center justify-center w-75 h-55 mb-6 shadow-lg rounded-full bg-white"                    
-                            onClick={(e) => {
+                            /*onClick={(e) => {
                                 e.preventDefault();
                                 claimNFTs(1);
                                 getData();
-                              }}>
-                        Mint
+                              }}*/
+                        >
+                        Soon Available /*mint*/
                         </Button>
                         <H4 color="gray">About Homer Club</H4>
                         <LeadText color="blueGray">
