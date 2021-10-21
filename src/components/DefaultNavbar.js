@@ -141,7 +141,7 @@ export default function DefaultNavbar() {
                                 </Button>
                             )
                             }
-                            <Button
+                           /* <Button
                                 color="transparent"
                                 className="bg-white text-black ml-4"
                                 ripple="dark"
@@ -151,7 +151,7 @@ export default function DefaultNavbar() {
                                     getData();
                                   }}>
                                     0 : Claim
-                            </Button>
+                            </Button>*/
                         </div>
                     </Nav>
                 </NavbarCollapse>
