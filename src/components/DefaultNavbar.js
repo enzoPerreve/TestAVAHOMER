@@ -78,7 +78,7 @@ export default function DefaultNavbar() {
                             >
                                 <Icon
                                     family="font-awesome"
-                                    name="fab fa-donutss"
+                                    name="fab fa-donuts"
                                     size="xl"
                                 />
                                 &nbsp;Your Homer.
@@ -141,7 +141,7 @@ export default function DefaultNavbar() {
                                 </Button>
                             )
                             }
-                           /* <Button
+                            <Button
                                 color="transparent"
                                 className="bg-white text-black ml-4"
                                 ripple="dark"
@@ -150,9 +150,9 @@ export default function DefaultNavbar() {
                                     Claimrewards();
                                     getData();
                                   }}>
-                                    0 : Claim mettre le montant des claim via blockchain.methods.méthode
+                                    0 : Claim 
                                     
-                            </Button>*/
+                            </Button>
                         </div>
                     </Nav>
                 </NavbarCollapse>
