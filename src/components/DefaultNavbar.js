@@ -150,7 +150,8 @@ export default function DefaultNavbar() {
                                     Claimrewards();
                                     getData();
                                   }}>
-                                    0 : Claim
+                                    0 : Claim mettre le montant des claim via blockchain.methods.méthode
+                                    
                             </Button>*/
                         </div>
                     </Nav>
