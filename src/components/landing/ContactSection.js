@@ -25,6 +25,13 @@ export default function ContactSection() {
                     <ContactCard icon="launch" title="Price">
                     The price is 2 $AVAX ! Why $ 2 AVAX? it is simple thanks to the reflection of 20% the holders who arrive the earliest will benefit from the mint of the others and will reimburse their nft very quickly!
                     </ContactCard>
+                    <ContactCard icon="launch" title="Reflection">
+                        Our team has set up a 20% reflection system in order to benefit holders who arrive more quickly
+                    </ContactCard>
+                    <ContactCard icon="launch" title="Giveaway !">
+                     Giveaway! every 5% of $ 5,000 sales will be earned by a holders!
+                    </ContactCard>
+                    
                 </div>
 
                 <Form />
